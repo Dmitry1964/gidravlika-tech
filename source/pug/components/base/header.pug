@@ -21,21 +21,29 @@ mixin header(headerMods, currentUrl)
     ]
 
   header.header(class=headerMods)
-    .container
-      if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
-      else
-        a.header__logo(href="index.html" aria-label="Переход на главную") Логотип
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button" aria-label="Переключатель отображения меню" aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active= link.text
-                else
-                  a.main-nav__link(href=link.href)= link.text
+    .header__wrapper
+      .header__banner
+        picture
+          source(type="image/webp" srcset="img/content/banner-desktop.webp")
+          img.header__banner-img(src="img/content/banner-desktop.jpeg", srcset= "img/content/banner-desktop@2x.jpeg2x", width= "1920", height= "804", alt= "Баннер")
+
+      .header__content
+        +header-contacts
+    //- .container
+    //- if(currentUrl === "index.html")
+    //-   //- lighthouse снимает 10 баллов SEO за <a> без href
+    //-   span.header__logo Логотип
+    //- else
+    //-   a.header__logo(href="index.html" aria-label="Переход на главную") Логотип
+    //- nav.main-nav
+    //-   button.main-nav__toggle.btn-reset(type="button" aria-label="Переключатель отображения меню" aria-pressed="false")
+    //-     +icon("icon-burger", 20, 20)
+    //-   .main-nav__wrapper
+    //-     ul.main-nav__list
+    //-       each link in headerLinks
+    //-         - const activeState = currentUrl === link.href
+    //-         li.main-nav__item
+    //-           if(activeState)
+    //-             span.main-nav__link.is-active= link.text
+    //-           else
+    //-             a.main-nav__link(href=link.href)= link.text

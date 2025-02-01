@@ -1,13 +1,23 @@
-.header {
-  padding: 28px 0;
+.header__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 
-  background-color: $color-neon-blue;
+.header__banner {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
 
-  .container {
-    display: flex;
-  }
+.header__content {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
 
-  &__logo {
-    color: $color-default-white;
-  }
+.header__banner-img {
+    object-fit: cover;
+    height: 804px;
 }
