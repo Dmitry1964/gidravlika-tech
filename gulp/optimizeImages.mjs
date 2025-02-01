@@ -54,7 +54,7 @@ const optimizePng = () =>
 const createWebp = () => {
   const root = '';
   return gulp
-      .src(`source/img/${root}**/*.{png,jpg}`)
+      .src(`source/img/${root}**/*.{png,jpg,jpeg}`)
       .pipe(webp({quality: 90}))
       .pipe(gulp.dest(`source/img/${root}`));
 };
