@@ -7,12 +7,17 @@ mixin header(headerMods, currentUrl)
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "О нас"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Услуги"
       },
+      {
+        href: "#",
+        text: "Контакты"
+      },
+
     ]
 
   header.header(class=headerMods)
@@ -21,9 +26,9 @@ mixin header(headerMods, currentUrl)
         //- lighthouse снимает 10 баллов SEO за <a> без href
         span.header__logo Логотип
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+        a.header__logo(href="index.html" aria-label="Переход на главную") Логотип
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+        button.main-nav__toggle.btn-reset(type="button" aria-label="Переключатель отображения меню" aria-pressed="false")
           +icon("icon-burger", 20, 20)
         .main-nav__wrapper
           ul.main-nav__list
