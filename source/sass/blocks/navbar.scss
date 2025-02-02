@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: $color-curious-blue-80;
+  // height: 100px;
+}
+
+.navbar__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 120px;
+}
+
+.navbar__item {
+  background-color: transparent;
+  transition: background-color 0.35s ease;
+}
+
+.navbar__link {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: $color-default-white;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 38px 50px;
+}
+
+.navbar__item:hover {
+  background-color: $color-eastern-blue;
+}

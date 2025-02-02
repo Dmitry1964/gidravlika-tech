@@ -1,0 +1,29 @@
+mixin navbar()
+  -
+    const navLinks = [
+      {
+        name: 'Главная',
+        href: '#'
+      },
+      {
+        name: 'О нас',
+        href: '#'
+      },
+      {
+        name: 'Услуги',
+        href: '#'
+      },
+      {
+        name: 'Контакты',
+        href: '#'
+      },
+    ]
+
+  nav.navbar
+    .container
+      ul.navbar__list
+        each link in navLinks
+          - activeState = currentUrl === link.href
+          li.navbar__item
+            a.navbar__link(href=link.href)=link.name
+
