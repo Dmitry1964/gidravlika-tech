@@ -24,8 +24,8 @@ mixin header(headerMods, currentUrl)
     .header__wrapper
       .header__banner
         picture
-          source(type="image/webp" srcset="img/content/banner-desktop.webp")
-          img.header__banner-img(src="img/content/banner-desktop.jpeg", srcset= "img/content/banner-desktop@2x.jpeg2x", width= "1920", height= "804", alt= "Баннер")
+          source(type="image/webp" srcset="img/content/banner-desktop.webp, img/content/banner-desktop@2x.webp 2x")
+          img.header__banner-img(src="img/content/banner-desktop.jpeg", srcset= "img/content/banner-desktop@2x.jpeg 2x", width= "1920", height= "804", alt= "Баннер")
 
       .header__content
         +header-contacts
