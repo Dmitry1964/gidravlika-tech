@@ -1,0 +1,40 @@
+.toggler {
+  width: 30px;
+  height: 50px;
+  background-color: $color-curious-blue;
+  border: 1px solid $color-curious-blue;
+  border-radius: 15px;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+
+  // &.isOpen {
+
+  // }
+}
+
+.toggler__body  {
+  width: 30px;
+  height: 50px;
+  background-color: $color-curious-blue;
+  border: 1px solid $color-curious-blue;
+  border-radius: 15px;
+}
+
+.toggler__switch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: $color-paua;
+  transition: transform 0.35s ease, background-color 0.5s ease-in;
+
+  &.isActive {
+    transform: translateY(20px);
+    background-color: $color-eastern-blue;
+  }
+}
+
+// .isActive {
+//   transform: translateY(20px);
+// }
